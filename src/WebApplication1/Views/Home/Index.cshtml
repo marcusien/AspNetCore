@@ -1,0 +1,26 @@
+﻿@model WebApplication1.ViewModels.ViewModelBase
+
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <p>This one works !</p>
+    <form asp-action="IndexPostWithoutIEnumerable">
+        <div>
+            My date<input asp-for="Test.MyDate" asp-format="{0:dd/MM/yyyy}" placeholder="dd/MM/yyyy" />
+            <br />
+            <input type="submit" value="Save" />
+        </div>
+    </form>
+
+    <br />
+    <br />
+
+    <p>This one does not !</p>
+    <form asp-action="IndexPostWithIEnumerable">
+        <div>
+            My date<input asp-for="Test.MyDate" asp-format="{0:dd/MM/yyyy}" placeholder="dd/MM/yyyy" />
+            <br />
+            <input type="submit" value="Save" />
+        </div>
+    </form>
